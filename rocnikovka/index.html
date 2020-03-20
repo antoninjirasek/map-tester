@@ -1,0 +1,56 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Rocnikovka</title>
+    <script src="https://cdn.maptiler.com/mapbox-gl-js/v0.53.0/mapbox-gl.js"></script>
+    <link href="https://cdn.maptiler.com/mapbox-gl-js/v0.53.0/mapbox-gl.css" rel="stylesheet" />
+    <style>
+        #map {
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+        }
+    </style>
+</head>
+
+<body>
+    
+    <div id="menu">
+        <script src="index.js"></script>
+        <button id="praha1" onclick="mapVisible();">Praha 1</button>
+        <button id="showname" onclick="showName()">show street names</button>
+        <button id="visible" onclick="mapVisible();">view map</button>
+        <button id="invisible" onclick="mapInvisible();">hide map</button>
+        <button id="fly">Fly</button>
+        <button id="hideName" onclick="hideName();">hide street names</button>
+    </div>
+    <div id="map" style="visibility: hidden;"></div>
+    <script src="index.js"></script>
+
+    <canvas style="top:25;left:80%;">
+        <form style="top:25;left:80%;">
+            First name:<br>
+            <input type="text" name="firstname"><br>
+            Last name:<br>
+            <input type="text" name="lastname">
+          </form>
+    </canvas>
+    <canvas style="top:35;right:25%;">
+        <div id="map"></div>
+    </canvas>
+
+    <div id="sources" style="bottom:0;visibility: hidden;">
+        <p><a href="https://www.maptiler.com/copyright/" target="_blank">© MapTiler</a> <a
+                href="https://www.openstreetmap.org/copyright" target="_blank">© OpenStreetMap contributors</a></p>
+    </div>
+
+    <script src="mapscript.js"></script>
+
+</body>
+
+</html>
