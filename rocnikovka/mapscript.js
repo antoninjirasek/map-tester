@@ -20,8 +20,15 @@ document.getElementById('fly').addEventListener('click', function (e) {
 function hideName() {
   if (map.getLayer('road_label'))
     map.removeLayer('road_label');
-
 }
+
+var street_name;
+var correct = 0;
+
+
+
+
+
 function showName() {
 
   map.addLayer({
@@ -144,4 +151,6 @@ map.on('style.load', function () {
     });
   }
 });
+
+
 //GET https://api.maptiler.com/geocoding/[location].json?key=Gi3106DynxuoFI5qOISp | cut -f9 -d"," | cut -f4 -d'"'
